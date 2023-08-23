@@ -46,9 +46,7 @@ table_avg as (
         HAVING sum_quantidade > 1000
 )
 SELECT
-    table_sum.COD_VENDEDOR,
-    table_sum.COD_LOJA,
-    table_sum.sum_quantidade - table_avg.avg_quantidade as var_sum_avg
+    table_sum.COD_VENDEDOR
 FROM
     table_sum
     INNER JOIN table_avg on table_sum.COD_LOJA = table_avg.COD_LOJA
