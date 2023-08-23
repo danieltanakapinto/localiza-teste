@@ -51,6 +51,6 @@ SELECT
     table_sum.sum_quantidade - table_avg.avg_quantidade as var_sum_avg
 FROM
     table_sum
-    LEFT JOIN table_avg on table_sum.COD_LOJA = table_avg.COD_LOJA
+    INNER JOIN table_avg on table_sum.COD_LOJA = table_avg.COD_LOJA
 WHERE
     table_sum.sum_quantidade - table_avg.avg_quantidade > 0
